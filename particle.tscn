@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://r3c41xlvq75m"]
+
+[ext_resource type="Texture2D" uid="uid://dltwtwlubv72r" path="res://Sprite/Line1.png" id="1_j42ei"]
+[ext_resource type="Script" path="res://dispear.gd" id="2_rqxiq"]
+
+[sub_resource type="Curve" id="Curve_phmdf"]
+min_value = -50.0
+max_value = 50.0
+bake_resolution = 1
+_data = [Vector2(0, 50), 0.0, 0.0, 0, 0, Vector2(1, -37.9121), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_uc8pt"]
+max_value = 3.0
+_data = [Vector2(0, 2.4), 0.0, 0.0, 0, 0, Vector2(1, 0.3), 0.332158, 0.0, 0, 0]
+point_count = 2
+metadata/_snap_enabled = true
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+texture_filter = 1
+emitting = false
+amount = 15
+lifetime = 1.5
+one_shot = true
+speed_scale = 4.5
+explosiveness = 0.85
+local_coords = true
+texture = ExtResource("1_j42ei")
+emission_shape = 1
+emission_sphere_radius = 6.2
+particle_flag_align_y = true
+gravity = Vector2(0, 20)
+radial_accel_min = 3.0
+radial_accel_max = 4.0
+radial_accel_curve = SubResource("Curve_phmdf")
+scale_amount_min = 1.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_uc8pt")
+script = ExtResource("2_rqxiq")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

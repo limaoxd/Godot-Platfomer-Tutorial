@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw6ljlno0f43q"]
+
+[ext_resource type="Texture2D" uid="uid://bjdpy4hbo5ci1" path="res://Sprite/parallax-mountain-foreground-trees.png" id="1_37lxp"]
+
+[node name="parallex_front" type="ParallaxBackground"]
+
+[node name="mid2" type="ParallaxLayer" parent="."]
+texture_filter = 1
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(8000, 0)
+
+[node name="Parallax-mountain-foreground-trees" type="Sprite2D" parent="mid2"]
+texture_filter = 2
+position = Vector2(1912, 104)
+scale = Vector2(14.3125, 14.3125)
+texture = ExtResource("1_37lxp")

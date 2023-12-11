@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsklhm8vy5nta"
-path="res://.godot/imported/swoosh.png-07dd8f463d49f724532e254553aef0df.ctex"
+path="res://.godot/imported/swoosh.png-b050e5bed5a8d9a849037a41283cc15a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://swoosh.png"
-dest_files=["res://.godot/imported/swoosh.png-07dd8f463d49f724532e254553aef0df.ctex"]
+source_file="res://Sprite/swoosh.png"
+dest_files=["res://.godot/imported/swoosh.png-b050e5bed5a8d9a849037a41283cc15a.ctex"]
 
 [params]
 

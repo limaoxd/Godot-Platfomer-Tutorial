@@ -26,8 +26,9 @@ var particle
 @onready var sweep_area 	= get_node("SweepSprite/SweepTrigger")
 
 func _on_area_2d_body_entered(body):	
-	if body.is_in_group("Wall") :
-		var dic = global_position.x - body.global_position.x
+	if body.is_in_group("Wall") :		
+		var dic = -direction
+		
 		if dic < 0 :
 			collide_side = 1
 		else:
@@ -36,7 +37,6 @@ func _on_area_2d_body_entered(body):
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group("Wall"):
-		collide_side = 0
 		on_wall = false
 
 func _on_sweep_trigger_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
@@ -164,7 +164,7 @@ func _physics_process(delta):
 			sweep.position.x = 0
 		else:
 			sweep.flip_h = true
-			sweep.position.x = -106			
+			sweep.position.x = -106
 	elif direction == 1:
 		sprite.flip_h = false
 		if on_wall and !rotated:

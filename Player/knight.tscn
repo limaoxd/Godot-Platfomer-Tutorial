@@ -1,8 +1,8 @@
 [gd_scene load_steps=81 format=3 uid="uid://ba4xnx1ixm8nb"]
 
-[ext_resource type="Script" path="res://Player/knight.gd" id="1_jai04"]
+[ext_resource type="Script" path="res://Scripts/knight.gd" id="1_uyrts"]
 [ext_resource type="Texture2D" uid="uid://bhsk6udyodtw" path="res://Sprite/character.png" id="2_ipf2b"]
-[ext_resource type="Texture2D" uid="uid://bsklhm8vy5nta" path="res://swoosh.png" id="3_tjvmq"]
+[ext_resource type="Texture2D" uid="uid://bsklhm8vy5nta" path="res://Sprite/swoosh.png" id="3_a5w5w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5pnul"]
 radius = 27.0
@@ -413,27 +413,27 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_riy4x"]
-atlas = ExtResource("3_tjvmq")
+atlas = ExtResource("3_a5w5w")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_246fd"]
-atlas = ExtResource("3_tjvmq")
+atlas = ExtResource("3_a5w5w")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ny0bi"]
-atlas = ExtResource("3_tjvmq")
+atlas = ExtResource("3_a5w5w")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_el73k"]
-atlas = ExtResource("3_tjvmq")
+atlas = ExtResource("3_a5w5w")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ekn03"]
-atlas = ExtResource("3_tjvmq")
+atlas = ExtResource("3_a5w5w")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rawt7"]
-atlas = ExtResource("3_tjvmq")
+atlas = ExtResource("3_a5w5w")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cw086"]
@@ -873,7 +873,7 @@ _data = {
 }
 
 [node name="Knight" type="CharacterBody2D"]
-script = ExtResource("1_jai04")
+script = ExtResource("1_uyrts")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
@@ -889,12 +889,11 @@ shape = SubResource("CapsuleShape2D_5pnul")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="trigger" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_mvmlv")
 
 [node name="KnightSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s4cd1")
-animation = &"Attack"
+animation = &"Jump"
 frame = 1
 
 [node name="SweepSprite" type="AnimatedSprite2D" parent="."]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://r3c41xlvq75m"]
 
 [ext_resource type="Texture2D" uid="uid://dltwtwlubv72r" path="res://Sprite/Line1.png" id="1_j42ei"]
-[ext_resource type="Script" path="res://dispear.gd" id="2_rqxiq"]
+[ext_resource type="Script" path="res://Scripts/dispear.gd" id="2_4yk35"]
 
 [sub_resource type="Curve" id="Curve_phmdf"]
 min_value = -50.0
@@ -36,7 +36,7 @@ radial_accel_curve = SubResource("Curve_phmdf")
 scale_amount_min = 1.5
 scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_uc8pt")
-script = ExtResource("2_rqxiq")
+script = ExtResource("2_4yk35")
 
 [node name="Timer" type="Timer" parent="."]
 
